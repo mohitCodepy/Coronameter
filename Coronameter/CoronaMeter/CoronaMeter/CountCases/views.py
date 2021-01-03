@@ -5,7 +5,7 @@ def country_call(request):
     country_list=[]
     url = "https://covid-193.p.rapidapi.com/statistics"
     headers = {
-        'x-rapidapi-key': "b894b6f775mshb802c02ce55ee6cp19cd3ajsnff31519ced90",
+        'x-rapidapi-key': "Your API Key Here",
         'x-rapidapi-host': "covid-193.p.rapidapi.com"
     }
     response = requests.request("GET", url, headers=headers)

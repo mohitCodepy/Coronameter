@@ -1,0 +1,82 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <title>CoronaMeter</title>
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,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" />
+</head>
+
+<body>
+    <!-- Image and text -->
+    <nav class="navbar align-content-center">
+        <div class="container-fluid d-inline-block w-auto ">
+            <a class="navbar-brand" href="#">
+                <img src="https://banner2.cleanpng.com/20200317/hef/transparent-covid19-coronavirus-virus-5e7091bb9153e6.7214550615844356435953.jpg"
+                    alt="" width="30" height="24" class="img-fluid d-inline-block align-top">
+                <h5 class="heading d-inline-block fw-bolder ">CoronaMeter</h5>
+            </a>
+        </div>
+        </div>
+        <div class="container mx-md-auto justify-content-end ">
+            <form action="{% url 'search' %}" method="post">
+                {% csrf_token %}
+                <input class="form-group searchtxt rounded-pill px-5 text-center fw-bolder" placeholder="Enter the country here" name="covidsearch" type="text">
+                <input class="btnn" type="submit" value="search">
+            </form>
+        </div>
+        </div>
+    </nav>
+    <div class="container-fluid section  ">
+        <div class="row">
+            <div class="col-xl-2 col-md-3 col-sm-4 col-5  overflow-auto mt-1 countries">
+                <h5 class="select_country fw-bolder text-white bg-dark text-center sticky-top">Select Country</h5>
+                <form action="{% url 'home' %}" method="POST">
+                    {% csrf_token %}
+                    {% for i in context %}
+                    <input class="btn btn-outline-warning text-dark d-block w-100" type="submit" name="Country_name"
+                        value="{{i}}">
+                    {% endfor %}
+                </form>
+            </div>
+            <div class="col-xl-10 col-md-9 col-sm-8 col-7 text-center my-5 justify-content-center ">
+                <h1 class="covidtxt text-white bg-warning rounded-pill">Live COVID-19</h1>
+                <div class="row">
+                    {% for x, y in cases.items %}
+                    <div class="card col-xl-6 col-md-2 col-sm-2 col-1 mx-auto mt-5 shadow " style="width: 22rem;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bolder">{{x}}</h5>
+                            <p class="card-text text-danger">{{y}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
